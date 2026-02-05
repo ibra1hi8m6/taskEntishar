@@ -1,6 +1,6 @@
 # User Management Application
 
-A full-stack user management application built with .NET Core 8 (Backend) and Angular 17 (Frontend).
+A full-stack user management application built with .NET Core 10 (Backend) and Angular 21 (Frontend).
 
 ## Features
 
