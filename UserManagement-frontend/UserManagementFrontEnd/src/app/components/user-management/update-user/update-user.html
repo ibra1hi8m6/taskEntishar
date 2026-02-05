@@ -1,0 +1,53 @@
+<div *ngIf="selectedUser">
+
+  <h3>Update User</h3>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div>
+      <label>Username</label>
+      <input type="text" formControlName="username">
+
+      <div *ngIf="hasDisplayableError('username')">
+        Username is required
+      </div>
+    </div>
+
+    <div>
+      <label>Password (leave empty to keep current)</label>
+      <input type="password" formControlName="password">
+    </div>
+
+    <div>
+      <label>Full Name</label>
+      <input type="text" formControlName="userFullName">
+
+      <div *ngIf="hasDisplayableError('userFullName')">
+        Full Name is required
+      </div>
+    </div>
+
+    <div>
+      <label>
+        <input type="checkbox" formControlName="isActive">
+        Is Active
+      </label>
+    </div>
+
+    <div>
+      <label>Date of Birth</label>
+      <input type="date" formControlName="dateOfBirth">
+
+      <div *ngIf="hasDisplayableError('dateOfBirth')">
+        Date of Birth is required
+      </div>
+    </div>
+
+    <button type="submit">Update User</button>
+    <button type="button" (click)="cancelEdit()">Cancel</button>
+
+    <div *ngIf="successMessage">{{ successMessage }}</div>
+    <div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+  </form>
+</div>

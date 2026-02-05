@@ -1,0 +1,15 @@
+D:\taskEntishar\UserManagement\UserManagement.Services\bin\Debug\net10.0\UserManagement.Services.deps.json
+D:\taskEntishar\UserManagement\UserManagement.Services\bin\Debug\net10.0\UserManagement.Services.dll
+D:\taskEntishar\UserManagement\UserManagement.Services\bin\Debug\net10.0\UserManagement.Services.pdb
+D:\taskEntishar\UserManagement\UserManagement.Services\bin\Debug\net10.0\UserManagement.Data.dll
+D:\taskEntishar\UserManagement\UserManagement.Services\bin\Debug\net10.0\UserManagement.Data.pdb
+D:\taskEntishar\UserManagement\UserManagement.Services\obj\Debug\net10.0\UserManagement.Services.csproj.AssemblyReference.cache
+D:\taskEntishar\UserManagement\UserManagement.Services\obj\Debug\net10.0\UserManagement.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\taskEntishar\UserManagement\UserManagement.Services\obj\Debug\net10.0\UserManagement.Services.AssemblyInfoInputs.cache
+D:\taskEntishar\UserManagement\UserManagement.Services\obj\Debug\net10.0\UserManagement.Services.AssemblyInfo.cs
+D:\taskEntishar\UserManagement\UserManagement.Services\obj\Debug\net10.0\UserManagement.Services.csproj.CoreCompileInputs.cache
+D:\taskEntishar\UserManagement\UserManagement.Services\obj\Debug\net10.0\UserMana.89FD345E.Up2Date
+D:\taskEntishar\UserManagement\UserManagement.Services\obj\Debug\net10.0\UserManagement.Services.dll
+D:\taskEntishar\UserManagement\UserManagement.Services\obj\Debug\net10.0\refint\UserManagement.Services.dll
+D:\taskEntishar\UserManagement\UserManagement.Services\obj\Debug\net10.0\UserManagement.Services.pdb
+D:\taskEntishar\UserManagement\UserManagement.Services\obj\Debug\net10.0\ref\UserManagement.Services.dll

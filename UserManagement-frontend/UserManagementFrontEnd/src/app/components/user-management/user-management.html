@@ -1,0 +1,29 @@
+<div>
+      <h2>User Management</h2>
+      <button (click)="goToHome()">Back to Home</button>
+      <button (click)="logout()">Logout</button>
+
+      <hr>
+
+      <app-add-user (userAdded)="onUserAdded()"></app-add-user>
+
+      <hr>
+
+      <app-update-user 
+        [selectedUser]="selectedUser"
+        (userUpdated)="onUserUpdated()"
+        (cancelUpdate)="onCancelUpdate()">
+      </app-update-user>
+
+      <hr>
+
+      <app-user-list 
+        (editUser)="onEditUser($event)"
+        (deleteUser)="onDeleteUser($event)">
+      </app-user-list>
+
+      <app-delete-user 
+        [userId]="userIdToDelete"
+        (userDeleted)="onUserDeleted()">
+      </app-delete-user>
+    </div>

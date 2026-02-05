@@ -1,0 +1,16 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<span>Enter your username</span>
+  <input formControlName="username" type="text">
+  <div *ngIf="hasDisplayableError('username')">
+    Username is required
+  </div>
+<span>Enter your password</span>
+  <input formControlName="password" type="password">
+  <div *ngIf="hasDisplayableError('password')">
+    Password is required
+  </div>
+
+  <button type="submit">Login</button>
+
+  <div *ngIf="errorMessage">{{ errorMessage }}</div>
+</form>

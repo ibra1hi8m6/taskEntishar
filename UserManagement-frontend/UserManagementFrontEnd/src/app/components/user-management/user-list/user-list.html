@@ -1,0 +1,29 @@
+<div>
+      <h3>User List</h3>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Full Name</th>
+            <th>Active</th>
+            <th>Date of Birth</th>
+            <th>Creation Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.username }}</td>
+            <td>{{ user.userFullName }}</td>
+            <td>{{ user.isActive ? 'Yes' : 'No' }}</td>
+            <td>{{ user.dateOfBirth | date }}</td>
+            <td>{{ user.creationDate | date }}</td>
+            <td>
+              <button (click)="onEdit(user)">Edit</button>
+              <button (click)="onDelete(user.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div *ngIf="errorMessage">{{ errorMessage }}</div>
+    </div>

@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="UserManagement.Api/UserManagement.Api.csproj" />
+  <Project Path="UserManagement.Data/UserManagement.Data.csproj" Id="83f3ba47-595e-4121-9c6e-153532081785" />
+  <Project Path="UserManagement.Services/UserManagement.Services.csproj" Id="cff8efc5-9eef-4712-b7fe-5d8264b47d16" />
+</Solution>

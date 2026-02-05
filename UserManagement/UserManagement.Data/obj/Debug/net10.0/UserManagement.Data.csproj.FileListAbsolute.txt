@@ -1,0 +1,14 @@
+D:\taskEntishar\UserManagement\UserManagement.Data\bin\Debug\net10.0\UserManagement.Data.deps.json
+D:\taskEntishar\UserManagement\UserManagement.Data\bin\Debug\net10.0\UserManagement.Data.runtimeconfig.json
+D:\taskEntishar\UserManagement\UserManagement.Data\bin\Debug\net10.0\UserManagement.Data.dll
+D:\taskEntishar\UserManagement\UserManagement.Data\bin\Debug\net10.0\UserManagement.Data.pdb
+D:\taskEntishar\UserManagement\UserManagement.Data\obj\Debug\net10.0\UserManagement.Data.csproj.AssemblyReference.cache
+D:\taskEntishar\UserManagement\UserManagement.Data\obj\Debug\net10.0\UserManagement.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\taskEntishar\UserManagement\UserManagement.Data\obj\Debug\net10.0\UserManagement.Data.AssemblyInfoInputs.cache
+D:\taskEntishar\UserManagement\UserManagement.Data\obj\Debug\net10.0\UserManagement.Data.AssemblyInfo.cs
+D:\taskEntishar\UserManagement\UserManagement.Data\obj\Debug\net10.0\UserManagement.Data.csproj.CoreCompileInputs.cache
+D:\taskEntishar\UserManagement\UserManagement.Data\obj\Debug\net10.0\UserManagement.Data.dll
+D:\taskEntishar\UserManagement\UserManagement.Data\obj\Debug\net10.0\refint\UserManagement.Data.dll
+D:\taskEntishar\UserManagement\UserManagement.Data\obj\Debug\net10.0\UserManagement.Data.pdb
+D:\taskEntishar\UserManagement\UserManagement.Data\obj\Debug\net10.0\UserManagement.Data.genruntimeconfig.cache
+D:\taskEntishar\UserManagement\UserManagement.Data\obj\Debug\net10.0\ref\UserManagement.Data.dll
