@@ -1,1 +1,9 @@
-<p>home works!</p>
+<h2>Welcome, {{ fullName || username }} 👋</h2>
+
+<button (click)="goToUserManagement()">
+  Go to User Management
+</button>
+
+<button (click)="logout()">
+  Logout
+</button>

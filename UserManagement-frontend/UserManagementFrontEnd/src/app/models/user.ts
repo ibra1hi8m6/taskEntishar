@@ -32,5 +32,5 @@ export interface LoginDto {
 export interface LoginResponse {
   token: string;
   username: string;
-  
+  userFullName: string;
 }

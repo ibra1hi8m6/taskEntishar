@@ -12,3 +12,4 @@ D:\taskEntishar\UserManagement\UserManagement.Data\obj\Debug\net10.0\refint\User
 D:\taskEntishar\UserManagement\UserManagement.Data\obj\Debug\net10.0\UserManagement.Data.pdb
 D:\taskEntishar\UserManagement\UserManagement.Data\obj\Debug\net10.0\UserManagement.Data.genruntimeconfig.cache
 D:\taskEntishar\UserManagement\UserManagement.Data\obj\Debug\net10.0\ref\UserManagement.Data.dll
+D:\taskEntishar\UserManagement\UserManagement.Data\obj\Debug\net10.0\UserManagement.Data.sourcelink.json

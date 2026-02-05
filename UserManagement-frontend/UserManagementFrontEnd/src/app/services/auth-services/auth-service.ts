@@ -51,20 +51,19 @@ export class AuthService {
     return !!this.getToken();
   }
 
-  private getUserDataFromToken(token?: string): LoginResponse | null {
-    const jwt = token ?? this.getToken();
-    if (!jwt) return null;
+private getUserDataFromToken(token?: string): LoginResponse | null {
+  const jwt = token ?? this.getToken();
+  if (!jwt) return null;
 
-    const decoded = this.decodeToken(jwt);
-    if (!decoded) return null;
+  const decoded = this.decodeToken(jwt);
+  if (!decoded) return null;
 
-    return {
-      token: jwt,
-      username: decoded.username,
-      
-    };
-  }
-
+  return {
+    token: jwt,
+    username: decoded.unique_name || decoded.name,
+    userFullName: decoded.fullName || decoded.fullname || decoded.full_name 
+  };
+}
   private decodeToken(token: string): any {
     try {
       const payload = token.split('.')[1];

@@ -1,4 +1,7 @@
-<div>
-      <div *ngIf="successMessage">{{ successMessage }}</div>
-      <div *ngIf="errorMessage">{{ errorMessage }}</div>
-    </div>
+<div *ngIf="user">
+  <p>Are you sure you want to delete:</p>
+  <strong>{{ user.username }} ({{ user.userFullName }})</strong>
+
+  <button (click)="deleteConfirmed()">Yes, Delete</button>
+  <button (click)="confirming = false">Cancel</button>
+</div>

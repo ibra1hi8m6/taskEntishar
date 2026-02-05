@@ -11,7 +11,8 @@ import { AuthService } from '../../services/auth-services/auth-service';
   styleUrl: './home.css',
 })
 export class HomeComponent implements OnInit {
-  userFullName: string = '';
+  username: string = '';
+  fullName: string = '';
 
   constructor(
     private authService: AuthService,
@@ -21,7 +22,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.authService.currentUser$.subscribe(user => {
       if (user) {
-        this.userFullName = user.userFullName;
+        this.username = user.username;
+        this.fullName = user.userFullName ?? '';
       }
     });
   }

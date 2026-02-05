@@ -1,29 +1,35 @@
 <div>
-      <h2>User Management</h2>
-      <button (click)="goToHome()">Back to Home</button>
-      <button (click)="logout()">Logout</button>
+  <h2>User Management</h2>
 
-      <hr>
+  <button (click)="goToHome()">Back to Home</button>
+  <button (click)="logout()">Logout</button>
 
-      <app-add-user (userAdded)="onUserAdded()"></app-add-user>
+  <hr>
 
-      <hr>
+  
+  <app-add-user (userAdded)="onUserAdded()"></app-add-user>
 
-      <app-update-user 
-        [selectedUser]="selectedUser"
-        (userUpdated)="onUserUpdated()"
-        (cancelUpdate)="onCancelUpdate()">
-      </app-update-user>
+  <hr>
 
-      <hr>
+  <app-update-user
+    *ngIf="selectedUser"
+    [selectedUser]="selectedUser"
+    (userUpdated)="onUserUpdated()"
+    (cancelUpdate)="onCancelUpdate()">
+  </app-update-user>
 
-      <app-user-list 
-        (editUser)="onEditUser($event)"
-        (deleteUser)="onDeleteUser($event)">
-      </app-user-list>
+  <hr>
 
-      <app-delete-user 
-        [userId]="userIdToDelete"
-        (userDeleted)="onUserDeleted()">
-      </app-delete-user>
-    </div>
+ 
+  <app-user-list
+    (editUser)="onEditUser($event)"
+    (deleteUser)="onDeleteUser($event)">
+  </app-user-list>
+
+
+  <app-delete-user
+    *ngIf="userToDelete"
+    [user]="userToDelete"
+    (userDeleted)="onUserDeleted()">
+  </app-delete-user>
+</div>

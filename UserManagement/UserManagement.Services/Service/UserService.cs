@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,80 +14,57 @@ namespace UserManagement.Services.Service
     public class UserService : IUserService
     {
         private readonly UserManager<User> _userManager;
+        private readonly IMapper _mapper;
 
-        public UserService(UserManager<User> userManager)
+        public UserService(UserManager<User> userManager, IMapper mapper)
         {
             _userManager = userManager;
+            _mapper = mapper;
         }
 
         public async Task<List<UserDto>> GetAllUsersAsync()
         {
             var users = await _userManager.Users.ToListAsync();
-            return users.Select(u => UserMapper.ToDto(u)).ToList();
+            return _mapper.Map<List<UserDto>>(users);
         }
 
         public async Task<UserDto> GetUserByIdAsync(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
-            if (user == null)
-            {
-                return null;
-            }
-
-            return UserMapper.ToDto(user);
+            return user == null ? null : _mapper.Map<UserDto>(user);
         }
 
-        public async Task<UserDto> CreateUserAsync(CreateUserDto createUserDto)
+        public async Task<UserDto> CreateUserAsync(CreateUserDto dto)
         {
-            var user = UserMapper.ToEntity(createUserDto);
+            var user = _mapper.Map<User>(dto);
 
-            // Create user without password hashing
-            var result = await _userManager.CreateAsync(user, createUserDto.Password);
+            var result = await _userManager.CreateAsync(user, dto.Password);
+            if (!result.Succeeded) return null;
 
-            if (!result.Succeeded)
-            {
-                return null;
-            }
-
-            return UserMapper.ToDto(user);
+            return _mapper.Map<UserDto>(user);
         }
 
-        public async Task<UserDto> UpdateUserAsync(UpdateUserDto updateUserDto)
+        public async Task<UserDto> UpdateUserAsync(UpdateUserDto dto)
         {
-            var user = await _userManager.FindByIdAsync(updateUserDto.Id);
+            var user = await _userManager.FindByIdAsync(dto.Id);
+            if (user == null) return null;
 
-            if (user == null)
-            {
-                return null;
-            }
+            _mapper.Map(dto, user);
 
-            UserMapper.UpdateEntity(user, updateUserDto);
-
-            // Update password if provided
-            if (!string.IsNullOrEmpty(updateUserDto.Password))
+            if (!string.IsNullOrEmpty(dto.Password))
             {
                 var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-                await _userManager.ResetPasswordAsync(user, token, updateUserDto.Password);
+                await _userManager.ResetPasswordAsync(user, token, dto.Password);
             }
 
             var result = await _userManager.UpdateAsync(user);
-
-            if (!result.Succeeded)
-            {
-                return null;
-            }
-
-            return UserMapper.ToDto(user);
+            return result.Succeeded ? _mapper.Map<UserDto>(user) : null;
         }
 
         public async Task<bool> DeleteUserAsync(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
-
-            if (user == null)
-            {
-                return false;
-            }
+            if (user == null) return false;
 
             var result = await _userManager.DeleteAsync(user);
             return result.Succeeded;

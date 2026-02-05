@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\taskEntishar\\UserManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9E880067-B76C-9760-89AD-3854E25D1D8E}|UserManagement.Api\\UserManagement.Api.csproj|d:\\taskentishar\\usermanagement\\usermanagement.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9E880067-B76C-9760-89AD-3854E25D1D8E}|UserManagement.Api\\UserManagement.Api.csproj|solutionrelative:usermanagement.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{83F3BA47-595E-4121-9C6E-153532081785}|UserManagement.Data\\UserManagement.Data.csproj|d:\\taskentishar\\usermanagement\\usermanagement.data\\mapper\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83F3BA47-595E-4121-9C6E-153532081785}|UserManagement.Data\\UserManagement.Data.csproj|solutionrelative:usermanagement.data\\mapper\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E880067-B76C-9760-89AD-3854E25D1D8E}|UserManagement.Api\\UserManagement.Api.csproj|d:\\taskentishar\\usermanagement\\usermanagement.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9E880067-B76C-9760-89AD-3854E25D1D8E}|UserManagement.Api\\UserManagement.Api.csproj|solutionrelative:usermanagement.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{CFF8EFC5-9EEF-4712-B7FE-5D8264B47D16}|UserManagement.Services\\UserManagement.Services.csproj|d:\\taskentishar\\usermanagement\\usermanagement.services\\iservice\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFF8EFC5-9EEF-4712-B7FE-5D8264B47D16}|UserManagement.Services\\UserManagement.Services.csproj|solutionrelative:usermanagement.services\\iservice\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFF8EFC5-9EEF-4712-B7FE-5D8264B47D16}|UserManagement.Services\\UserManagement.Services.csproj|d:\\taskentishar\\usermanagement\\usermanagement.services\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFF8EFC5-9EEF-4712-B7FE-5D8264B47D16}|UserManagement.Services\\UserManagement.Services.csproj|solutionrelative:usermanagement.services\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFF8EFC5-9EEF-4712-B7FE-5D8264B47D16}|UserManagement.Services\\UserManagement.Services.csproj|d:\\taskentishar\\usermanagement\\usermanagement.services\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFF8EFC5-9EEF-4712-B7FE-5D8264B47D16}|UserManagement.Services\\UserManagement.Services.csproj|solutionrelative:usermanagement.services\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E880067-B76C-9760-89AD-3854E25D1D8E}|UserManagement.Api\\UserManagement.Api.csproj|d:\\taskentishar\\usermanagement\\usermanagement.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,37 +38,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\taskEntishar\\UserManagement\\UserManagement.Api\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "UserManagement.Api\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\taskEntishar\\UserManagement\\UserManagement.Api\\Properties\\launchSettings.json",
-              "RelativeToolTip": "UserManagement.Api\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAowBAAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-05T06:37:17.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\taskEntishar\\UserManagement\\UserManagement.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "UserManagement.Api\\appsettings.json",
-              "ToolTip": "D:\\taskEntishar\\UserManagement\\UserManagement.Api\\appsettings.json",
-              "RelativeToolTip": "UserManagement.Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-04T09:25:10.986Z",
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "D:\\taskEntishar\\UserManagement\\UserManagement.Services\\IService\\IAuthService.cs",
+              "RelativeDocumentMoniker": "UserManagement.Services\\IService\\IAuthService.cs",
+              "ToolTip": "D:\\taskEntishar\\UserManagement\\UserManagement.Services\\IService\\IAuthService.cs",
+              "RelativeToolTip": "UserManagement.Services\\IService\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T17:57:51.374Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\taskEntishar\\UserManagement\\UserManagement.Services\\Service\\AuthService.cs",
+              "RelativeDocumentMoniker": "UserManagement.Services\\Service\\AuthService.cs",
+              "ToolTip": "D:\\taskEntishar\\UserManagement\\UserManagement.Services\\Service\\AuthService.cs",
+              "RelativeToolTip": "UserManagement.Services\\Service\\AuthService.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAQwDMAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T17:30:23.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\taskEntishar\\UserManagement\\UserManagement.Services\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "UserManagement.Services\\Service\\UserService.cs",
+              "ToolTip": "D:\\taskEntishar\\UserManagement\\UserManagement.Services\\Service\\UserService.cs",
+              "RelativeToolTip": "UserManagement.Services\\Service\\UserService.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAcwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T15:31:37.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserMapper.cs",
+              "DocumentMoniker": "D:\\taskEntishar\\UserManagement\\UserManagement.Data\\Mapper\\UserMapper.cs",
+              "RelativeDocumentMoniker": "UserManagement.Data\\Mapper\\UserMapper.cs",
+              "ToolTip": "D:\\taskEntishar\\UserManagement\\UserManagement.Data\\Mapper\\UserMapper.cs",
+              "RelativeToolTip": "UserManagement.Data\\Mapper\\UserMapper.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAzwBQAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T15:27:48.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\taskEntishar\\UserManagement\\UserManagement.Api\\Program.cs",
               "RelativeDocumentMoniker": "UserManagement.Api\\Program.cs",
@@ -68,29 +102,31 @@
               "RelativeToolTip": "UserManagement.Api\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T09:23:18Z"
+              "WhenOpened": "2026-02-04T09:23:18Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ServiceExtensions.cs",
               "DocumentMoniker": "D:\\taskEntishar\\UserManagement\\UserManagement.Api\\Extensions\\ServiceExtensions.cs",
               "RelativeDocumentMoniker": "UserManagement.Api\\Extensions\\ServiceExtensions.cs",
               "ToolTip": "D:\\taskEntishar\\UserManagement\\UserManagement.Api\\Extensions\\ServiceExtensions.cs",
               "RelativeToolTip": "UserManagement.Api\\Extensions\\ServiceExtensions.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAewCQAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwEgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T09:18:48.028Z"
+              "WhenOpened": "2026-02-04T09:18:48.028Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "UsersController.cs",
               "DocumentMoniker": "D:\\taskEntishar\\UserManagement\\UserManagement.Api\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "UserManagement.Api\\Controllers\\UsersController.cs",
               "ToolTip": "D:\\taskEntishar\\UserManagement\\UserManagement.Api\\Controllers\\UsersController.cs",
               "RelativeToolTip": "UserManagement.Api\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAowFAAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAADwv14AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T09:17:39.553Z",
               "EditorCaption": ""

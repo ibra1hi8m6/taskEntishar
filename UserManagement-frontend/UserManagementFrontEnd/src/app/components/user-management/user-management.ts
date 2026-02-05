@@ -1,10 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+
 import { AddUserComponent } from './add-user/add-user';
 import { UpdateUserComponent } from './update-user/update-user';
 import { DeleteUserComponent } from './delete-user/delete-user';
 import { UserListComponent } from './user-list/user-list';
+
 import { User } from '../../models/user';
 import { AuthService } from '../../services/auth-services/auth-service';
 
@@ -13,6 +15,7 @@ import { AuthService } from '../../services/auth-services/auth-service';
   standalone: true,
   imports: [
     CommonModule,
+    RouterModule,
     AddUserComponent,
     UpdateUserComponent,
     DeleteUserComponent,
@@ -23,15 +26,20 @@ import { AuthService } from '../../services/auth-services/auth-service';
 })
 export class UserManagementComponent {
   selectedUser: User | null = null;
-  userIdToDelete: string = '';
+  userToDelete: User | null = null;
 
-  @ViewChild(UserListComponent) userListComponent!: UserListComponent;
-  @ViewChild(DeleteUserComponent) deleteUserComponent!: DeleteUserComponent;
+  @ViewChild(UserListComponent)
+  userListComponent!: UserListComponent;
 
   constructor(
     private router: Router,
     private authService: AuthService
   ) {}
+
+  // Navigation to child components
+  navigateTo(path: string): void {
+    this.router.navigate([`/users/${path}`]);
+  }
 
   onEditUser(user: User): void {
     this.selectedUser = user;
@@ -50,13 +58,12 @@ export class UserManagementComponent {
     this.userListComponent.refreshList();
   }
 
-  onDeleteUser(userId: string): void {
-    this.userIdToDelete = userId;
-    this.deleteUserComponent.deleteUser(userId);
+  onDeleteUser(user: User): void {
+    this.userToDelete = user;
   }
 
   onUserDeleted(): void {
-    this.userIdToDelete = '';
+    this.userToDelete = null;
     this.userListComponent.refreshList();
   }
 

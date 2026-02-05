@@ -15,7 +15,7 @@ export class UserListComponent implements OnInit {
   errorMessage: string = '';
 
   @Output() editUser = new EventEmitter<User>();
-  @Output() deleteUser = new EventEmitter<string>();
+  @Output() deleteUser = new EventEmitter<User>();
   @Output() usersLoaded = new EventEmitter<void>();
 
   constructor(private userService: UserService) {}
@@ -40,11 +40,11 @@ export class UserListComponent implements OnInit {
     this.editUser.emit(user);
   }
 
-  onDelete(id: string): void {
-    if (confirm('Are you sure you want to delete this user?')) {
-      this.deleteUser.emit(id);
-    }
+ onDelete(user: User): void {
+  if (confirm('Are you sure you want to delete this user?')) {
+    this.deleteUser.emit(user); 
   }
+}
 
   refreshList(): void {
     this.loadUsers();

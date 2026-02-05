@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserService } from '../../../services/user-services/user-service';
+import { User } from '../../../models/user';
 
 @Component({
   selector: 'app-delete-user',
@@ -10,24 +11,29 @@ import { UserService } from '../../../services/user-services/user-service';
   styleUrl: './delete-user.css',
 })
 export class DeleteUserComponent {
-  @Input() userId: string = '';
+  @Input() user!: User;               
   @Output() userDeleted = new EventEmitter<void>();
 
-  successMessage: string = '';
-  errorMessage: string = '';
+  confirming = false;
+  successMessage = '';
+  errorMessage = '';
 
   constructor(private userService: UserService) {}
 
-  deleteUser(id: string): void {
-    this.userService.deleteUser(id).subscribe({
+  confirmDelete(): void {
+    this.confirming = true;
+  }
+
+  deleteConfirmed(): void {
+    if (!this.user) return;
+    this.userService.deleteUser(this.user.id).subscribe({
       next: () => {
-        this.successMessage = 'User deleted successfully!';
-        this.errorMessage = '';
         this.userDeleted.emit();
+        this.confirming = false;
       },
-      error: (error) => {
+      error: (err) => {
         this.errorMessage = 'Failed to delete user';
-        this.successMessage = '';
+        this.confirming = false;
       }
     });
   }

@@ -40,7 +40,7 @@ namespace UserManagement.Services.Service
                 return null;
             }
 
-            var token = GenerateJwtToken(user.Id, user.UserName);
+            var token = GenerateJwtToken(user);
 
             return new LoginResponseDto
             {
@@ -49,24 +49,29 @@ namespace UserManagement.Services.Service
             };
         }
 
-        public string GenerateJwtToken(string userId, string username)
+        public string GenerateJwtToken(User user)
         {
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, userId),
-                new Claim(JwtRegisteredClaimNames.UniqueName, username),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-            };
+        new Claim(ClaimTypes.NameIdentifier, user.Id),
+        new Claim(ClaimTypes.Name, user.UserName),
+        new Claim("fullName", user.UserFullName),
+        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+    };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var key = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(_configuration["Jwt:Key"])
+            );
+
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Audience"],
                 claims: claims,
-                expires: DateTime.Now.AddHours(3),
-                signingCredentials: creds);
+                expires: DateTime.UtcNow.AddHours(3),
+                signingCredentials: creds
+            );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
